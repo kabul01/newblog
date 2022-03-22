@@ -3,10 +3,10 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <h1>Редактировать</h1>
-    <form method="post" enctype="multipart/form-data">{% csrf_token %}
-        {{ form.media }}
-        {{ form|crispy }}
+<h1>Редактировать</h1>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    {{ form.media }}
+    {{ form|crispy }}
     <button class="btn btn-info ml-2" type="submit">Сохранить</button>
-    </form>
+</form>
 {% endblock content %}
