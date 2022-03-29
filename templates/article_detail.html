@@ -10,9 +10,10 @@
             <h1 class="card-title">{{ object.title }}</h1>
             <h6 class="card-subtitle mb-2 text-muted">Автор: {{ object.author }} | {{ object.date }}</h6>
             <p class="card-text">{{ object.body | safe}}</p>
-            <a href="{% url 'article_edit' article.pk %}">Редактировать</a> |
-            <a href="{% url 'article_delete' article.pk %}">Удалить</a> |
-            <a href="{% url 'article_list' %}">Все посты</a>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <a href="{% url 'article_edit' article.pk %}" button type="button" class="btn btn-danger">Редактировать</button></a>
+            <a href="{% url 'article_delete' article.pk %}" button type="button" class="btn btn-warning">Удалить</button></a>
+            <a href="{% url 'article_list' %}" button type="button" class="btn btn-success">Все посты</button></a>
         </div>
         <div class="card">
             <div class="card-header">Комменты</div>
